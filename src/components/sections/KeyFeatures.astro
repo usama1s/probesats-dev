@@ -1,0 +1,139 @@
+<section class="key-features">
+  <div class="container mx-auto ps-grid">
+    <h3>Key Features</h3>
+    <div class="features">
+      {
+        [
+          "First Unified Data Hub",
+          "First Analytics Tool",
+          "First Charting Tool",
+          "Real-Time Monitoring",
+        ].map((item) => (
+          <div class="feature-item">
+            <img src="/checkbox-checked.svg" />
+            <span>{item}</span>
+          </div>
+        ))
+      }
+      {
+        [
+          "Aggregation",
+          "AI power Market Insights",
+          "Trend Recognitions",
+          "New Protocols Onboarding",
+        ].map((item) => (
+          <div class="feature-item">
+            <img src="/checkbox-checked.svg" />
+            <span>{item}</span>
+          </div>
+        ))
+      }
+    </div>
+    <div class="text">
+      Our key features not only serve as our Unique Value Proposition (UVP) but
+      also provide a distinct Competitive Advantage. Our product's unique
+      capabilities are integral to both setting us apart in the market and
+      delivering unmatched value to market.
+    </div>
+  </div>
+</section>
+<style>
+  .features {
+    grid-column: 2/-2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    height: min-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    .feature-item {
+      place-self: center;
+      width: 300px;
+      max-width: 300px;
+      max-height: 56.46px;
+      padding: 14.12px 0px 14.12px 0px;
+      border-radius: 9.41px;
+      border: 0.47px;
+      border: 0.47px solid #f7931a;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: center;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: -1px;
+      text-align: left;
+    }
+  }
+  .text {
+    grid-column: 2/-2;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 32px 0px 32px 0px;
+    border: 0px 0px 1px 0px;
+  }
+  .key-features .container > div {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+  @media screen and (max-width: 1517px) {
+    .features {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      .feature-item {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .features {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+      .feature-item {
+        width: 100%;
+      }
+    }
+    .key-features .container > div {
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+    }
+  }
+</style>
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".key-features h3", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".key-features",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".key-features .features div", {
+    opacity: 0,
+    x: -100,
+    stagger: 0.2,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".key-features",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".key-features .text", {
+    y: 100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".key-features",
+      start: "top center",
+    },
+  });
+</script>

@@ -1,0 +1,6 @@
+<svg width="21" height="50" viewBox="0 0 21 50" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10.5" cy="25" r="9.5" transform="rotate(90 10.5 25)" stroke="white"/>
+    <circle cx="10.5" cy="25" r="2" transform="rotate(90 10.5 25)" fill="white"/>
+    <line x1="11" y1="2.18557e-08" x2="11" y2="50" stroke="white"/>
+</svg>

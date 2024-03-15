@@ -1,0 +1,99 @@
+<section class="competitive-edge">
+  <div class="container mx-auto ps-grid">
+    <h2>Competitive Edge</h2>
+    <div class="image">
+      <img src="/competitive-edge.svg" />
+    </div>
+    <div class="text space-y-2">
+      <p class="font-bold">
+        <span class="font-bold accent">We've a Head start</span> - Beta can already
+        providing proper info, charts, and analytics for both users and protocols.
+      </p><p>
+        Others are screwing up by solely tackling a small piece of the Echo.
+        That's bad technical execution & FOMO. The stats tell a different story
+        - BRC20 surpasses Ordinals in volume, and the New Protocols outpaces
+        BRC20.
+      </p><p class="font-bold">
+        In 2024, we're here to simplify swapping and redefine the landscape for
+        broader adoption.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .competitive-edge {
+    .container {
+      .image {
+        min-width: 500px;
+        grid-column: 1 / span 7;
+        place-self: center;
+      }
+      .text {
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        grid-column: 8/-2;
+        text-align: center;
+        place-self: center;
+      }
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .competitive-edge {
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 64px;
+        .image {
+          width: 100%;
+          min-width: unset;
+        }
+        .text {
+          width: 100%;
+        }
+      }
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".competitive-edge h2", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".competitive-edge",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".competitive-edge .container .image", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".competitive-edge",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".competitive-edge .container .text", {
+    opacity: 0,
+    x: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".competitive-edge",
+      start: "top center",
+    },
+  });
+</script>

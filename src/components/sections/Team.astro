@@ -1,0 +1,236 @@
+<section class="team">
+  <div class="container mx-auto ps-grid">
+    <h2>Team</h2>
+    <div class="content">
+      <div class="members">
+        <div class="member">
+          <img class="member-photo" src="/member-ash.svg" />
+          <div class="member-name">Ash</div>
+          <div class="member-title accent">Founder and CEO</div>
+          <div class="social">
+            <a href="#">
+              <img src="/linkd-in.svg" />
+            </a>
+            <a href="#">
+              <img src="/x.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="member">
+          <img class="member-photo" src="/member-chimp.svg" />
+          <div class="member-name">Chimp</div>
+          <div class="member-title accent">Co-Founder and CRO</div>
+          <div class="social">
+            <a href="#">
+              <img src="/linkd-in.svg" />
+            </a>
+            <a href="#">
+              <img src="/x.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="member">
+          <img class="member-photo" src="/member-conor.svg" />
+          <div class="member-name">Conor Hill</div>
+          <div class="member-title accent">Business</div>
+          <div class="social">
+            <a href="#">
+              <img src="/linkd-in.svg" />
+            </a>
+            <a href="#">
+              <img src="/x.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="member">
+          <img class="member-photo" src="/member-abhijeet.svg" />
+          <div class="member-name">Abhijeet Pawar</div>
+          <div class="member-title accent">Finance</div>
+          <div class="social">
+            <a href="#">
+              <img src="/linkd-in.svg" />
+            </a>
+            <a href="#">
+              <img src="/x.svg" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text">
+        Serious business meets serious banter - our unique specialty.<br />
+        <span class="accent">
+          While catering the top-tier organizations & delivering top-tier memes,
+        </span> We know what we're doing & got the perfect combo for crypto visionaries.
+        We've got the brains, the sass, and the success stories to prove it with
+        our Professional Workplace History and Backgrounds.
+      </div>
+      <div class="icons">
+        <img src="/icon-1.svg" />
+        <img src="/icon-2.svg" />
+        <img src="/icon-3.svg" />
+        <img src="/icon-4.svg" />
+        <img src="/icon-5.svg" />
+        <img src="/icon-6.svg" />
+        <img src="/icon-7.svg" />
+        <img src="/icon-8.svg" />
+        <img src="/icon-9.svg" />
+        <img src="/icon-10.svg" />
+        <img src="/icon-11.svg" />
+      </div>
+    </div>
+    <div class="image">
+      <img src="/standing-out.svg" />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .team {
+    padding: 64px 0;
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 3rem;
+      grid-column: 2 / span 6;
+      .members {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+        gap: 1rem;
+        .member {
+          display: grid;
+          grid: "image title" "image subtitle" "image social" / auto 1fr;
+          width: 341px;
+          column-gap: 1rem;
+          row-gap: 0.5rem;
+          height: min-content;
+          padding: 1rem;
+          .member-name {
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 22px;
+            text-align: left;
+            grid-area: title;
+          }
+          .member-photo {
+            grid-area: image;
+            border-radius: 16px;
+          }
+          .member-title {
+            font-size: 16px;
+            font-family: Montserrat;
+            font-weight: 500;
+            line-height: 17.6px;
+            letter-spacing: 1.28px;
+            word-wrap: break-word;
+          }
+          .social {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            grid-area: social;
+          }
+        }
+      }
+      .text {
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+    }
+    .image {
+      flex: 1;
+      min-width: 253px;
+      grid-column: 9 / span 3;
+      img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .icons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .team {
+      .content {
+        justify-content: center;
+        grid-column: 1 / -1;
+        .members {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 32px;
+        }
+      }
+      .image {
+        display: none;
+      }
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".team h2", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".team",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".team .content .members .member", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".team",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".team .content .image", {
+    opacity: 0,
+    x: 100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".team",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".team .text", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".team",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".team .icons img", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".team",
+      start: "top center",
+    },
+  });
+</script>

@@ -1,0 +1,16 @@
+<script>
+  import MouseFollower from "mouse-follower";
+  import gsap from "gsap";
+  MouseFollower.registerGSAP(gsap);
+  const cursor = new MouseFollower();
+  window.addEventListener("splash-ended", () => {
+    MouseFollower.registerGSAP(gsap);
+    const cursor = new MouseFollower();
+  });
+</script>
+<style lang="scss" is:global>
+  @import "/node_modules/mouse-follower/src/scss/index.scss";
+  .mf-cursor:before {
+    background: rgb(var(--accent));
+  }
+</style>

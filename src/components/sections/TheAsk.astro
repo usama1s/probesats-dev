@@ -1,0 +1,208 @@
+<section class="the-ask">
+  <div class="container mx-auto ps-grid">
+    <h2>The Ask</h2>
+    <div class="valuation">
+      <div class="line-1">
+        we need <span class="accent">$2.8<span class="million">M</span></span>
+        for unleashing potential in the Bitcoin landscape
+      </div>
+      <div class="line-2">
+        at a <span class="accent">$35.7<span class="million">M</span></span>
+        valuation.
+      </div>
+    </div>
+    <div class="investment">
+      <div class="line"></div>
+      This investment will drive product development and facilitate an immediate
+      market push.<br /> Yes we do have a token planned as well. Our focus areas
+      include
+    </div>
+    <div class="percentages">
+      <div class="percentage pct-65">
+        65% Tech & Hiring <div class="line"></div>
+      </div>
+      <div class="percentage pct-15">
+        15% Operational Efficiency for Infra <div class="line"></div>
+      </div>
+      <div class="percentage pct-15">
+        15% Growth & Marketing <div class="line"></div>
+      </div>
+      <div class="percentage pct-5">
+        5% Risk Management <div class="line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .the-ask {
+    .container {
+      row-gap: 4rem;
+      .valuation {
+        grid-column: 2/-2;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 53px;
+        letter-spacing: -2px;
+        text-align: center;
+        .line-1 {
+          word-break: keep-all;
+          // text-wrap: nowrap;
+        }
+        .accent {
+          font-size: 110px;
+          font-weight: 700;
+          line-height: 121px;
+          letter-spacing: -4px;
+          .million {
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 106px;
+          }
+        }
+      }
+      .investment {
+        display: flex;
+        grid-column: 2/-2;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: center;
+        text-wrap: balance;
+        .line {
+          width: 300px;
+          height: 2px;
+          border-radius: 52px;
+          background: #ffffff;
+        }
+      }
+      .percentages {
+        display: flex;
+        grid-column: 2/-2;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        .percentage {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 22px;
+          letter-spacing: 0em;
+          text-align: center;
+          .line {
+            background: #f7931a;
+            height: 2px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border-radius: 52px;
+          }
+          &.pct-65 .line {
+            width: 151px;
+          }
+          &.pct-15 .line {
+            width: 35px;
+          }
+          &.pct-5 .line {
+            width: 12px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .the-ask {
+      .container {
+        row-gap: 2.5rem;
+        .percentages {
+          flex-wrap: wrap;
+        }
+        .valuation {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 25px;
+          letter-spacing: normal;
+          .accent {
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 50px;
+            letter-spacing: normal;
+            .million {
+              font-size: 25px;
+              font-weight: 700;
+              line-height: 25px;
+            }
+          }
+        }
+        .investment {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: normal;
+        }
+        .percentages {
+          .percentage {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: normal;
+          }
+        }
+      }
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".the-ask h2", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".the-ask",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".the-ask .valuation > div", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".the-ask",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".the-ask .investment", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".the-ask",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".the-ask .percentages .percentage", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".the-ask",
+      start: "top center",
+    },
+  });
+</script>

@@ -1,0 +1,276 @@
+<section class="proven-model">
+  <div class="container mx-auto">
+    <h3>The Method</h3>
+    <div class="logos">
+      <img
+        src="/blur.svg"
+        alt="Blur"
+        class="blur-logo"
+        width="100"
+      />
+      <img
+        src="/linkedin-logo.svg"
+        alt="LinkedIn"
+        class="linkedin"
+        width="100"
+      />
+      <img
+        src="/doordash.svg"
+        alt="DoorDash"
+        class="doordash"
+        width="131"
+      />
+      <img
+        src="/amazon.svg"
+        alt="Amazon"
+        class="amazon"
+        width="100"
+      />
+      <img
+        src="/logo.svg"
+        alt="Probesats"
+        class="probesats"
+        width="36"
+      />
+    </div>
+    <div class="line">
+      <div class="progress"></div>
+    </div>
+    <div class="model">
+      <img
+        src="/gather.svg"
+        alt="Gather"
+        class="gather-icon .icon"
+        width="100"
+      />
+      <div class="gather-text text">
+        <div class="title">Gather : <span class="accent">Data</span></div>
+        <div class="body">
+          Understand the users' pain points, and ecosystem deficiencies.
+        </div>
+      </div>
+      <img
+        class="model-divider"
+        src="/proven-model-divider.svg"
+        height="50"
+        width="auto"
+      />
+      <img
+        src="/decode.svg"
+        alt="Decode"
+        class="decode-icon .icon"
+      />
+      <div class="decode-text text">
+        <div class="title">
+          Decode : <span class="accent">Data visualization</span>
+        </div>
+        <div class="body">
+          This is where the magic happened to create an incredible product doing
+          analytics
+        </div>
+      </div>
+      <img
+        class="model-divider"
+        src="/proven-model-divider.svg"
+        height="50"
+        width="auto"
+      />
+      <img
+        src="/aggregate.svg"
+        alt="Aggregate"
+        class="aggregate-icon .icon"
+      />
+      <div class="aggregate-text text">
+        <div class="title">
+          Aggregate : <span class="accent">The Market Needs</span>
+        </div>
+        <div class="body">
+          Matching market needs through analytics & Delivering the Market
+          Aggregation & Analytics platform
+        </div>
+      </div>
+      <img
+        class="model-divider"
+        src="/proven-model-divider.svg"
+        height="50"
+        width="auto"
+      />
+      <img
+        src="/deliver.svg"
+        alt="Deliver"
+        class="deliver-icon .icon"
+      />
+      <div class="deliver-text text">
+        <div class="title">
+          Deliver : <span class="accent">The Product</span>
+        </div>
+        <div class="body">
+          Delivering the Market Aggregation & Analytics platform
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style lang="scss">
+  .proven-model {
+    .container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+    }
+    h3 {
+      grid-column: 1/-1;
+    }
+    .logos {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: space-between;
+      justify-items: center;
+      align-items: center;
+    }
+    .line {
+      width: 15px;
+      height: 100%;
+      background: white;
+      position: relative;
+      border-radius: 1rem;
+      overflow: visible;
+      place-self: center;
+      .progress {
+        background: rgb(var(--accent));
+        width: 100%;
+        position: absolute;
+        top: 0;
+        border-radius: 1rem;
+        box-shadow: 0 0 15px 0 rgba(var(--accent), 0.75);
+      }
+    }
+    .model {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 8px;
+      row-gap: 8px;
+      align-items: center;
+      .text {
+        max-width: 421px;
+      }
+      .title {
+        font-size: 24px;
+        font-family: Montserrat;
+        font-weight: 500;
+        line-height: 26.4px;
+      }
+      .body {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 17.6px;
+        word-wrap: break-word;
+      }
+    }
+    .model-divider {
+      grid-column: 1/-1;
+      place-self: center;
+    }
+    .gather-icon,
+    .decode-icon,
+    .aggregate-icon,
+    .deliver-icon {
+      width: 100px;
+      height: 100px;
+      aspect-ratio: 1/1;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .proven-model {
+      margin-top: 64px;
+      margin-bottom: 64px;
+      .container {
+        column-gap: 16px;
+      }
+      .model {
+        column-gap: 8px;
+        grid-template-columns: 75px min-content;
+      }
+      .title {
+        font-size: 16px;
+      }
+      .text {
+        font-size: 12px;
+      }
+      .icon {
+        width: 100px;
+        height: 100px;
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+</style>
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".proven-model h3", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".proven-model ",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".logos img", {
+    opacity: 0,
+    x: -100,
+    duration: 0.5,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".proven-model",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".proven-model .model img", {
+    opacity: 0,
+    x: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".proven-model",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".proven-model .model .text", {
+    opacity: 0,
+    x: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".proven-model",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".proven-model .line ", {
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".proven-model",
+      start: "top center",
+    },
+  });
+
+  gsap.fromTo(
+    ".proven-model .line .progress",
+    { height: 0 },
+    {
+      height: "100%",
+      duration: 10,
+      scrollTrigger: {
+        trigger: ".proven-model .line",
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+      },
+    }
+  );
+</script>

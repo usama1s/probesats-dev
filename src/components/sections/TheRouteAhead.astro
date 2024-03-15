@@ -1,0 +1,305 @@
+<section class="the-route-ahead">
+  <h2>The route ahead</h2>
+  <div class="content">
+    <div class="phase-card-wrapper one">
+      <div class="phase-card">
+        <div class="phase">
+          <span>Phase 1</span><img
+            src="/phase-complete-checkbox.svg"
+          />
+        </div>
+        <div class="title">The Beta</div>
+        <div class="list">
+          <ul>
+            <li>Biggest Data Lake</li>
+            <li>Charting Platform</li>
+            <li>BEST Analytics tool</li>
+            <li>First Telegram Bot</li>
+          </ul>
+        </div>
+      </div>
+      <div class="line">
+        <svg class="segment-one" width="50" height="50">
+          <line x1="0" y1="0" x2="50" y2="50" stroke="orange"></line>
+        </svg>
+        <div class="segment-two"></div>
+        <img src="/planet-marker.svg" />
+      </div>
+    </div>
+    <div class="phase-card-wrapper two">
+      <div class="phase-card">
+        <div class="phase">
+          <span>Phase 2</span>
+        </div>
+        <div class="title">The Product</div>
+        <div class="list">
+          <ul>
+            <li>Marketplace Aggregator</li>
+            <li>Aggregating Dex</li>
+            <li>Launchpad</li>
+            <li>Profile Onboarding</li>
+          </ul>
+        </div>
+      </div>
+      <div class="line">
+        <svg class="segment-one" width="50" height="50">
+          <line x1="0" y1="0" x2="50" y2="50" stroke="orange"></line>
+        </svg>
+        <div class="segment-two"></div>
+        <img src="/planet-marker.svg" />
+      </div>
+    </div>
+    <div class="phase-card-wrapper three">
+      <div class="phase-card">
+        <div class="phase">
+          <span>Phase 3</span>
+        </div>
+        <div class="title">Future</div>
+        <div class="list">
+          <ul>
+            <li>Creator Zone</li>
+            <li>Personalized Solutions</li>
+            <li>Points and Leaderboard</li>
+          </ul>
+        </div>
+      </div>
+      <div class="line">
+        <svg class="segment-one" width="50" height="50">
+          <line x1="0" y1="0" x2="50" y2="50" stroke="orange"></line>
+        </svg>
+        <div class="segment-two"></div>
+        <img src="/planet-marker.svg" />
+      </div>
+    </div>
+    <img class="planet" src="/planet.png" alt="Moon" />
+  </div>
+</section>
+
+<style lang="scss">
+  h2 {
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 108px;
+    letter-spacing: -4px;
+    text-align: left;
+    margin: 10rem 0 5rem 0;
+    margin-left: 100px;
+  }
+
+  .the-route-ahead {
+    height: 958px;
+
+    .content {
+      position: relative;
+      .phase-card-wrapper {
+        position: absolute;
+        top: var(--top-offset, 0);
+        --left: calc(
+          var(--left-offset, 0) + ((100vw - min(1200px, 100vw)) / 2)
+        );
+        --connector-width: calc(100vw - var(--left) - 430px);
+        left: var(--left);
+        .phase-card {
+          overflow: visible;
+          width: 3.5in;
+          border: rgb(var(--accent)) 1px solid;
+          border-radius: 12px;
+          padding: 23px 36px;
+          .phase {
+            color: #f7931a;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: 1.6px;
+            word-wrap: break-word;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 16px;
+            margin-bottom: 12px;
+          }
+          .title {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: 2px;
+            word-wrap: break-word;
+          }
+          .list {
+            color: #a0a3a4;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 1.6px;
+            word-wrap: break-word;
+            ul {
+              padding: 20px 0 0 40px;
+              li {
+                list-style-image: url("/phase-list-image.svg");
+              }
+            }
+          }
+        }
+        .line {
+          position: relative;
+          height: 50px;
+          width: calc(100vw - var(--left) - var(--right-offset));
+          --segment-one-left: 124px;
+          --segment-one-width: 50px;
+          .segment-one {
+            position: absolute;
+            left: var(--segment-one-left);
+            width: var(--segment-one-width);
+          }
+          .segment-two {
+            position: absolute;
+            bottom: 0;
+            border-bottom: #f7931a 1px solid;
+            left: calc(var(--segment-one-left) + var(--segment-one-width));
+            right: 0;
+          }
+          img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translate(50%, 50%);
+          }
+        }
+        &.one {
+          --top-offset: 150px;
+          --left-offset: 0px;
+          --right-offset: 430px;
+        }
+        &.two {
+          --top-offset: 90px;
+          --left-offset: 380px;
+          --right-offset: 350px;
+        }
+        &.three {
+          --top-offset: 50px;
+          --left-offset: 760px;
+          --right-offset: 265px;
+        }
+      }
+      .planet {
+        position: absolute;
+        right: 0;
+        top: -250px;
+        z-index: -1;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .the-route-ahead {
+      height: auto;
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+        margin-top: 64px;
+        .phase-card-wrapper {
+          position: static;
+          .phase-card {
+            overflow: visible;
+            width: 3.5in;
+            border: rgb(var(--accent)) 1px solid;
+            border-radius: 12px;
+            padding: 23px 36px;
+            .phase {
+              color: #f7931a;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 22px;
+              letter-spacing: 1.6px;
+              word-wrap: break-word;
+              display: flex;
+              align-items: center;
+              flex-direction: row;
+              gap: 16px;
+              margin-bottom: 12px;
+            }
+            .title {
+              color: white;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 22px;
+              letter-spacing: 2px;
+              word-wrap: break-word;
+            }
+            .list {
+              color: #a0a3a4;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 24px;
+              letter-spacing: 1.6px;
+              word-wrap: break-word;
+              ul {
+                padding: 20px 0 0 40px;
+                li {
+                  list-style-image: url("/phase-list-image.svg");
+                }
+              }
+            }
+          }
+          .line {
+            display: none;
+          }
+        }
+        .planet {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1516px) {
+    h2 {
+      margin-left: 1rem;
+    }
+    @media screen and (max-width: 750px) {
+      h2 {
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -1px;
+        margin: 61px 1rem;
+      }
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".the-route-ahead h2", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".the-route-ahead",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".the-route-ahead .content .phase-card-wrapper", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".the-route-ahead",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".the-route-ahead .content .planet", {
+    opacity: 0,
+    x: 200,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".the-route-ahead",
+      start: "top center",
+    },
+  });
+</script>

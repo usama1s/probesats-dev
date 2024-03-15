@@ -1,0 +1,32 @@
+{
+  "name": "probesats-deck",
+  "type": "module",
+  "version": "0.0.3",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "prepare-build": "node -e \"const fs = require('fs'); ['dist/pages', 'dist/deck'].forEach(dir => fs.mkdirSync(dir, { recursive: true }));\"",
+    "build-pages": "npm run prepare-build && astro check && astro build pages/index.astro -o dist/pages",
+    "build-deck": "npm run prepare-build && astro check && astro build deck/bkhfwikhf92u-uiuk3bs-f2hu3iajkdh-238akofbpackdnbv/deck.astro -o dist/deck",
+    "preview": "astro preview",
+    "astro": "astro",
+    "deploy-pages": "npm run build-pages && gh-pages -d dist/pages --nojekyll && echo 'Pages deployed to https://probesats-deck.pages.dev/probesats-deck/'",
+    "deploy-my-deck": "npm run build-deck && gh-pages -d dist/_astro --nojekyll && echo 'My app deployed to https://probesats-deck.pages.dev/probesats-deck/'"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.6",
+    "@astrojs/tailwind": "^5.1.0",
+    "@studio-freight/lenis": "^1.0.39",
+    "astro": "^4.4.12",
+    "gsap": "^3.12.5",
+    "mouse-follower": "^1.1.2",
+    "split-type": "^0.3.4",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "sass": "^1.71.1"
+  }
+}

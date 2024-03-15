@@ -1,0 +1,138 @@
+<section class="projections">
+  <div class="container mx-auto ps-grid">
+    <h2>Projections</h2>
+    <div class="image">
+      <img src="/projections.svg" alt="Projections" />
+    </div>
+    <div class="text space-y-2">
+      <p>
+        a modest projection exulting in the volume of major token protocols. <span
+          class="accent"
+        >
+          The burning question: How big can it get?
+        </span>
+      </p><p>
+        Want to know more about our business model, projections, and Beta-phase
+        finance. Strategic details, guarded for our competitive edge, await your
+        discovery. Meet the team & let's find out
+      </p>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .image {
+    grid-column: 2 / span 5;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    place-self: center;
+    gap: 4px;
+    .market-share {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+    .arrow {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .orange-circle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgb(var(--accent));
+      border-radius: 50%;
+      color: black;
+      width: 161px;
+      height: 161px;
+      aspect-ratio: 1 / 1;
+      span:nth-child(1) {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      span:nth-child(2) {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+  }
+  .text {
+    grid-column: 8 / -2;
+    place-self: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  @media screen and (max-width: 1000px) {
+    .image {
+      width: 100%;
+      min-width: unset;
+      grid-column: 2/-2;
+      img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .text {
+      width: 100%;
+      padding: 0 24px;
+      grid-column: 2/-2;
+      margin-top: 1rem;
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".projections h2", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".projections",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".projections .container .image", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".projections",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".projections .container .text", {
+    opacity: 0,
+    x: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".projections",
+      start: "top center",
+    },
+  });
+</script>

@@ -1,0 +1,87 @@
+<section class="traction not-full-height">
+  <div class="container mx-auto ps-grid">
+    <h3>Traction</h3>
+    <div class="text">
+      In December '23, we successfully acquired and revamped Ordiarbbot into
+      ProbeBot,<br /><br /> with under <span class="accent">430 instances</span>
+      it Revealed an average of <br /><span class="accent">
+        34% price difference</span
+      > on the top three platforms and uncovering<br />
+      <span class="accent">$500k+</span> in price variations.
+    </div>
+    <div class="image">
+      <img src="/traction.svg" alt="Traction" />
+    </div>
+  </div>
+</section>
+<style lang="scss">
+  h3 {
+    grid-column: 2/-1;
+    grid-row: 1;
+  }
+  .text {
+    grid-column: 2 / span 5;
+    grid-row: 2;
+
+    font-family: Montserrat;
+    font-size: 24px;
+    line-height: 24px;
+    place-self: center;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .image {
+    grid-column: 8 / span 4;
+    place-self: center;
+    grid-row: 2;
+  }
+  @media screen and (max-width: 700px) {
+    .container {
+      row-gap: 2rem;
+    }
+    .image {
+      grid-column: 2/-2;
+      grid-row: 3;
+    }
+    .text {
+      grid-column: 2/-2;
+      grid-row: 2;
+    }
+  }
+</style>
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".traction h3", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".traction",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".traction .image", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".traction",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".traction .text", {
+    opacity: 0,
+    x: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".traction",
+      start: "top center",
+    },
+  });
+</script>

@@ -1,0 +1,804 @@
+---
+import Splash from "../components/shared/Splash.astro";
+import FluidCursorCanvas from "../components/shared/FluidCursorCanvas.astro";
+import Cursor from "../components/shared/Cursor.astro";
+import Particles from "../components/shared/Particles.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>Probesats</title>
+  </head>
+  <body>
+    <FluidCursorCanvas enableKeyPressEffect />
+    <Cursor />
+    <Particles />
+    <Splash />
+    <main>
+      <div class="pointDeck">
+        <div class="buttonClass" id="open-close"></div>
+
+        <div class="twitterLink">
+          <a href="https://x.com/1800_lama" class="follow-on-x" target="_blank">
+            Follow on X <img src="/link-arrow.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <form
+        class="join-beta"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSd5Xe-wVXPAF0Di0XBj6wHY6yfSybcxU6kmotQp5DpqXk2Wkg/formResponse"
+        method="POST"
+      >
+        <div class="logo">
+          <img src="/logo-large.svg" alt="Probesats" />
+          <div class="probesats">
+            PROBE<span class="accent">SATS</span>
+            <div class="beta">BETA</div>
+          </div>
+        </div>
+        <input
+          type="email"
+          placeholder="email"
+          name="entry.1259569965"
+          required
+        />
+        <button type="submit">I want Access</button>
+        <div class="error hidden">
+          That didn't work <svg
+            width="22"
+            height="23"
+            viewBox="0 0 22 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 15.5C15 15.5 13.5 13.5 11 13.5C8.5 13.5 7 15.5 7 15.5M16 8.74C15.605 9.225 15.065 9.5 14.5 9.5C13.935 9.5 13.41 9.225 13 8.74M9 8.74C8.605 9.225 8.065 9.5 7.5 9.5C6.935 9.5 6.41 9.225 6 8.74M21 11.5C21 17.0228 16.5228 21.5 11 21.5C5.47715 21.5 1 17.0228 1 11.5C1 5.97715 5.47715 1.5 11 1.5C16.5228 1.5 21 5.97715 21 11.5Z"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="success hidden">
+          gm, it's Done! we'll update you <svg
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.5 9.5H15.51M9.5 9.5H9.51M22.5 12.5C22.5 18.0228 18.0228 22.5 12.5 22.5C6.97715 22.5 2.5 18.0228 2.5 12.5C2.5 6.97715 6.97715 2.5 12.5 2.5C18.0228 2.5 22.5 6.97715 22.5 12.5ZM16 9.5C16 9.77614 15.7761 10 15.5 10C15.2239 10 15 9.77614 15 9.5C15 9.22386 15.2239 9 15.5 9C15.7761 9 16 9.22386 16 9.5ZM10 9.5C10 9.77614 9.77614 10 9.5 10C9.22386 10 9 9.77614 9 9.5C9 9.22386 9.22386 9 9.5 9C9.77614 9 10 9.22386 10 9.5ZM12.5 18C15.0005 18 17 16.167 17 14.5H8C8 16.167 9.9995 18 12.5 18Z"
+              stroke="black"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </form>
+      <div class="logo contact-us">
+        <img src="/logo-large.svg" alt="Probesats" />
+      </div>
+      <form
+        class="contact-us"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSf4o42q1MUmESfsLeh_n3NZ6EJAKykSMWVIDV9jkFlWDQp32g/formResponse"
+        method="post"
+      >
+        <h1 class="topHeading">Seed the opportunity with us!</h1>
+        <input
+          name="entry.2030824787"
+          type="text"
+          placeholder="Name*"
+          required
+        />
+        <input
+          name="entry.2030824786"
+          type="text"
+          placeholder="@x_username*"
+          required
+        />
+        <input
+          name="entry.1366608538"
+          type="text"
+          placeholder="tg username*"
+          required
+        />
+        <input
+          name="entry.428129921"
+          required
+          type="email"
+          placeholder="Email*"
+        />
+        <textarea
+          placeholder="Want to connect ASAP ? Tell us more (optional)"
+          name="entry.1289907235"></textarea>
+        <label class="accent">i'm interested in*</label>
+        <div class="choices">
+          <button class="choice selected" type="button">
+            <img src="/checkbox-small.svg" alt="Checkbox" />
+            Investor
+          </button>
+          <button class="choice" type="button">
+            <img src="/checkbox-small.svg" alt="Checkbox" />
+            Opportunities
+          </button>
+          <button class="choice" type="button">
+            <img src="/checkbox-small.svg" alt="Checkbox" />
+            Partnerships
+          </button>
+          <input
+            required
+            type="hidden"
+            name="entry.1925511013"
+            value="Investor"
+          />
+        </div>
+        <button type="submit">Get in Touch</button>
+      </form>
+
+      <div class="links">
+        <div>THE ULTIMATE BITCOIN EXPERIENCE</div>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style lang="scss" is:global>
+  :root {
+    --accent: 247, 147, 26;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+    --background: #070b0f;
+    --viewport-height: 100vh;
+  }
+
+  @supports (height: 100dvh) {
+    :root {
+      --viewport-height: 100dvh;
+    }
+  }
+
+  html {
+    font-family: Montserrat, sans-serif;
+    min-height: var(--viewport-height);
+  }
+
+  body {
+    color: white;
+    background:
+      url("/background.svg") no-repeat,
+      var(--background);
+    background-image: url("/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  html,
+  body {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .accent {
+    color: rgb(var(--accent));
+  }
+
+  button.points-button {
+    color: #f7931a;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 15.4px */
+    display: inline-flex;
+    padding: 12px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+  }
+
+  main {
+    height: var(--viewport-height);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 8rem;
+    place-items: center;
+    gap: 12px;
+    margin-left: 100px;
+    margin-right: 100px;
+    position: relative;
+  }
+  @media screen and (max-width: 1200px) {
+    main {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  input {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 15.4px */
+    display: flex;
+    padding: 12px 15px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    outline: none;
+  }
+
+  textarea {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 15.4px */
+    display: flex;
+    padding: 12px 15px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    outline: none;
+    resize: none;
+    min-height: 65px;
+    vertical-align: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    form {
+      padding: 0 20px;
+    }
+  }
+
+  button[type="submit"] {
+    display: flex;
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.996);
+  }
+  form.join-beta {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    place-self: center;
+    flex-direction: column;
+    max-width: 346px;
+    width: 350px;
+    flex-direction: column;
+
+    .logo img {
+      display: none;
+    }
+    input {
+      margin-top: 20px;
+    }
+    button[type="submit"] {
+      margin-top: 8px;
+      height: 39px;
+    }
+    .success,
+    .error {
+      margin-top: 1rem;
+    }
+  }
+  form.join-beta:not(.hidden) {
+    display: flex;
+  }
+
+  form.contact-us {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 20px;
+    grid-column: 7 / span 4;
+    grid-row: 1;
+    top: 90px;
+
+    input,
+    textarea {
+      // width: 100%;
+      font-family: Montserrat;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 11px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: white;
+      background-color: #000;
+    }
+    label {
+      color: #f7931a;
+      font-size: 10px;
+      font-family: Montserrat;
+      font-weight: 300;
+      line-height: 11px;
+      margin-left: 10px;
+    }
+    button.choice {
+      // &.selected {
+      //   border: 1px solid #f7931a;
+      // }
+    }
+    .topHeading {
+      font-family: National;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    .choices {
+      display: flex;
+      gap: 10px;
+      button {
+        color: white;
+        font-family: National;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 15.4px */
+        display: inline-flex;
+        padding: 12px 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 5px;
+        outline: none;
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+  .pointDeck {
+    position: absolute;
+    font-size: 14px;
+    display: flex;
+    justify-content: baseline;
+    gap: 30px;
+    width: 257px;
+    top: 37px;
+    right: 20px;
+  }
+
+  .buttonClass {
+    /* Set initial background image */
+    background-image: url("/pointdeck.svg");
+    justify-content: flex-start;
+    /* Other button styles */
+    width: 130px; /* Adjust width as needed */
+    height: 90px; /* Adjust height as needed */
+    background-size: contain; /* Ensure the background image fits within the button */
+    background-repeat: no-repeat; /* Center the background image */
+    position: relative;
+    transition: background-image 0.8s ease;
+  }
+
+  .buttonClass .default-text {
+    /* Initially visible text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .buttonClass:hover .default-text {
+    /* Hide text on hover */
+    opacity: 0;
+    pointer-events: none; /* Disable pointer events on hover */
+  }
+
+  .buttonClass:hover {
+    background-image: url("/Mouse hover.svg");
+    justify-content: flex-start;
+    filter: opacity(80%);
+    background-size: 100px 100px;
+    z-index: 1;
+  }
+
+  .buttonClass:hover .default-text:hover {
+    opacity: 1; /* Ensure text is visible when hovered over */
+    pointer-events: auto; /* Enable pointer events when hovering over text */
+  }
+  .twitterLink {
+    margin-top: 8px;
+  }
+
+  .twitterLink a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+
+  .twitterLink a:hover {
+    color: rgb(var(--accent));
+  }
+  .twitterLink img {
+    margin-left: 5px; /* Adjust the margin as needed */
+  }
+  form.contact-us:not(.hidden) {
+    display: flex;
+  }
+  .logo.contact-us {
+    grid-row: 1;
+  }
+  form.contact-us,
+  .logo.contact-us {
+    visibility: hidden;
+  }
+  @media screen and (max-width: 950px) {
+    main {
+      grid-template-rows: minmax(1in, 2in) 1fr 8rem;
+    }
+    form.join-beta {
+      grid-row: 2;
+      grid-column: 1 / -1;
+    }
+    .logo.contact-us {
+      grid-row: 1;
+      grid-column: 1 / -1;
+      img {
+        display: none;
+      }
+      align-self: flex-end;
+    }
+    form.contact-us {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      .choices {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .error {
+    padding: 12px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: rgba(255, 0, 0, 0.3);
+  }
+  .error:not(.hidden) {
+    display: flex;
+  }
+
+  .success {
+    padding: 12px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 15.4px */
+  }
+  .success:not(.hidden) {
+    display: flex;
+  }
+
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    grid-column: 3 / span 3;
+    display: flex;
+    img {
+      position: relative;
+      margin-bottom: 1rem;
+      place-self: center;
+      align-self: center;
+      height: 357px;
+      top: 60px;
+    }
+    .probesats {
+      // PROBE
+      color: white;
+      font-size: 21.28px;
+      font-weight: 500;
+      line-height: 23.41px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
+      .beta {
+        margin-left: 1rem;
+        color: rgb(var(--accent));
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 110%; /* 13.2px */
+        display: flex;
+        padding: 4px 17px 5px 17px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: 0.3px solid rgb(var(--accent));
+      }
+    }
+    .ultimate {
+      color: white;
+      font-size: 12.41px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 13.65px;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .links {
+    grid-column: 1 / -1;
+    display: flex;
+    fled-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      font-size: 14px;
+      font-family: Montserrat;
+      font-weight: 500;
+      line-height: 15.4px;
+      height: 39px;
+      padding: 12px 30px 12px 30px;
+      border-radius: 5px;
+      border: 0px 0px 0.3px 0px;
+      gap: 10px;
+      background: #00000099;
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { TextPlugin } from "gsap/TextPlugin";
+  gsap.registerPlugin(TextPlugin);
+
+  const currentHost = window.location.href;
+
+  // const deckLink = document.getElementById("deck-link");
+
+  // deckLink &&
+  //   deckLink.addEventListener("click", function (e) {
+  //     e.preventDefault(); // Prevent the default link behavior
+
+  //     // Open a confirm box to ask if the user has a password
+  //     const hasPassword = confirm("Do you have a password?");
+
+  //     if (hasPassword) {
+  //       // Prompt the user to enter their password
+  //       const password = prompt("Please enter your password:");
+
+  //       if (password) {
+  //         // Redirect the user to the new URL including the password and "/deck"
+  //         window.location.href = `${password}/deck`;
+  //       } else {
+  //         alert("You need to enter a password to continue.");
+  //       }
+  //     } else {
+  //       alert("Access requires a password.");
+  //     }
+  //   });
+
+  const openCloseButton = document.querySelector("#open-close")!;
+  const joinBetaForm: HTMLFormElement =
+    document.querySelector("form.join-beta")!;
+  const contactUsForm: HTMLFormElement =
+    document.querySelector("form.contact-us")!;
+  const logo: HTMLElement = document.querySelector(".logo.contact-us")!;
+
+  let showingJoinBeta = true;
+
+  openCloseButton.addEventListener("click", () => {
+    // fade in one form and out the other
+    if (showingJoinBeta) {
+      gsap.to(joinBetaForm, { autoAlpha: 0, duration: 0.5 });
+      gsap.to(contactUsForm, { autoAlpha: 1, duration: 0.5 });
+      gsap.to(logo, { autoAlpha: 1, duration: 0.5 });
+      gsap.to(openCloseButton, { text: "X" });
+    } else {
+      gsap.to(joinBetaForm, { autoAlpha: 1, duration: 0.5 });
+      gsap.to(contactUsForm, { autoAlpha: 0, duration: 0.5 });
+      gsap.to(logo, { autoAlpha: 0, duration: 0.5 });
+      gsap.to(openCloseButton, { text: "" });
+    }
+    showingJoinBeta = !showingJoinBeta;
+  });
+
+  const submitForm = async (form: HTMLFormElement) => {
+    const formData = new FormData(form);
+    const valid = form.checkValidity();
+    if (!valid) {
+      throw new Error("Form is not valid");
+    }
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/x-www-form-encoded",
+      },
+    });
+  };
+
+  joinBetaForm.addEventListener("submit", async (e: any) => {
+    e.preventDefault();
+
+    const email = joinBetaForm.querySelector(
+      "input[type=email]"
+    ) as HTMLInputElement;
+    const joinBetaButton = joinBetaForm.querySelector(
+      "button[type=submit]"
+    ) as HTMLButtonElement;
+    const error = joinBetaForm.querySelector(".error") as HTMLElement;
+    const success = joinBetaForm.querySelector(".success") as HTMLElement;
+
+    try {
+      await submitForm(joinBetaForm);
+      error.classList.add("hidden");
+      success.classList.remove("hidden");
+      email.style.display = "none";
+      joinBetaButton.style.display = "none";
+    } catch (e) {
+      error.classList.remove("hidden");
+      success.classList.add("hidden");
+      console.error(e);
+    }
+  });
+
+  contactUsForm.querySelectorAll("button.choice").forEach((choice) => {
+    choice.addEventListener("click", (e) => {
+      const choiceInput = contactUsForm.querySelector(
+        'input[name="entry.1925511013"]'
+      )! as HTMLInputElement;
+      const target = e.target as HTMLButtonElement;
+      const img = target.querySelector("img");
+
+      // Remove 'selected' class from all buttons and set img src to checkbox-small.svg
+      contactUsForm.querySelectorAll("button.choice").forEach((choice) => {
+        choice.classList.remove("selected");
+        const img = choice.querySelector("img");
+        if (img) img.src = "/checkbox-small.svg";
+      });
+
+      // Set img src to checkbox-checked.svg and mark current button as selected
+      if (img) img.src = "/checkbox-checked.svg";
+      target.classList.add("selected");
+
+      // Set input field value to button text content
+      choiceInput.value = target.textContent ?? "";
+    });
+  });
+
+  const name = contactUsForm.querySelector(
+    'input[name="entry.2030824786"]'
+  ) as HTMLInputElement;
+  const username = contactUsForm.querySelector(
+    'input[name="entry.1366608538"]'
+  ) as HTMLInputElement;
+  contactUsForm.addEventListener("submit", async (e: any) => {
+    e.preventDefault();
+
+    // require at least entry.2030824786 or entry.1366608538 is filled in, if neither then trigger native browser required validation on the field
+    if (!name.value && !username.value) {
+      username.setCustomValidity("Please fill 'x username' or 'tg username'");
+      username.reportValidity();
+      return;
+    } else {
+      username.setCustomValidity("");
+      username.reportValidity();
+    }
+
+    try {
+      await submitForm(contactUsForm);
+
+      // Change the button text to "See You" only upon successful form submission
+      const submitButton = contactUsForm.querySelector(
+        'button[type="submit"]'
+      ) as HTMLButtonElement;
+      const img = document.createElement("img");
+      img.src = "/checkbox-checked.svg"; // Replace with the path to your image
+      img.alt = "Thank you";
+      const inputElements = contactUsForm.querySelectorAll("input");
+
+      inputElements.forEach((input) => {
+        input.style.backgroundColor = "black";
+      });
+      // inputElement.style.backgroundColor = "black";
+      if (submitButton) {
+        submitButton.textContent = "Thank you! See you soon!";
+        submitButton.style.backgroundColor = "black"; // Example color
+        submitButton.style.color = "white";
+
+        // Apply CSS to position the image to the right of the text
+        submitButton.style.display = "flex";
+        submitButton.style.alignItems = "center";
+        submitButton.appendChild(img);
+
+        // Set the order of the text and the image
+        submitButton.style.flexDirection = "row-reverse"; // Text comes before the image
+      }
+      img.style.order = "-1";
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
+  name.addEventListener("input", () => {
+    username.setCustomValidity("");
+    username.reportValidity();
+  });
+
+  username.addEventListener("input", () => {
+    name.setCustomValidity("");
+    name.reportValidity();
+    username.setCustomValidity("");
+    username.reportValidity();
+  });
+
+  gsap.from(".join-beta .logo, .join-beta input, .join-beta button", {
+    x: -100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+    ease: "power2.out",
+  });
+
+  gsap.from(".links a", {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+    ease: "power2.out",
+  });
+
+  gsap.from("#open-close", {
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out",
+  });
+</script>

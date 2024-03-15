@@ -1,0 +1,232 @@
+<section class="into-the-market">
+  <div class="container mx-auto">
+    <h2>The market</h2>
+    <div class="header">Inscriptions & BRC20 market</div>
+    <div class="content">
+      <div class="title sun">Total Addressable Market</div>
+      <div class="image sun">
+        <img src="/sun.svg" />
+        <span>$53 Billion +</span>
+      </div>
+      <div class="subtitle sun">
+        Total market capitalisation of NFT collection stands <span
+          class="accent">$25.9 Billion</span
+        >
+      </div>
+      <div class="image earth">
+        <img src="/earth.svg" />
+        <span>$2.89 Billion</span>
+      </div>
+      <div class="title earth">Serviceable Addressable Market</div>
+      <div class="subtitle earth">
+        Total Inscriptions mcap stands <span class="accent">$2.89 Billion</span>
+      </div>
+      <div class="image moon">
+        <img src="/moon.svg" />
+        <span>$578 million</span>
+      </div>
+      <div class="title moon">Serviceable Obtainable Market</div>
+      <div class="subtitle moon">
+        <span class="accent">20%</span> of the market share as the first mover
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto market-opportunity">
+    <img
+      src="/iceburg.svg"
+      class="iceburg"
+      alt="Market Opportunity"
+    />
+    <img
+      src="/iceburg-small.svg"
+      class="iceburg-small"
+      alt="Market Opportunity"
+    />
+  </div>
+</section>
+
+<style lang="scss">
+  .into-the-market {
+    padding: 64px 0;
+
+    .header {
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28.8px;
+      word-wrap: break-word;
+      text-align: center;
+    }
+    .content {
+      display: grid;
+      grid: "sun-image earth-image moon-image" "sun-title earth-title moon-title" "sun-subtitle earth-subtitle moon-subtitle";
+      gap: 18px;
+      align-items: center;
+      justify-items: center;
+      margin: 0 150px;
+      .image {
+        position: relative;
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.25) 0%,
+            rgba(0, 0, 0, 0.1) 100%
+          );
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 6.04px;
+          backdrop-filter: blur(37.29px);
+          padding: 8px 16px;
+          width: max-content;
+        }
+      }
+      .title {
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.8px;
+        word-wrap: break-word;
+        text-align: center;
+      }
+      .subtitle {
+        text-align: center;
+        .accent {
+          text-decoration: underline;
+        }
+      }
+      .image.sun {
+        grid-area: sun-image;
+        color: white;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 43.2px;
+        word-wrap: break-word;
+      }
+      .title.sun {
+        grid-area: sun-title;
+      }
+      .subtitle.sun {
+        grid-area: sun-subtitle;
+      }
+      .image.earth {
+        grid-area: earth-image;
+        // $2.89 Billion
+        color: white;
+        font-size: 19.64px;
+        font-weight: 700;
+        line-height: 23.57px;
+        word-wrap: break-word;
+      }
+      .title.earth {
+        grid-area: earth-title;
+      }
+      .subtitle.earth {
+        grid-area: earth-subtitle;
+      }
+      .image.moon {
+        grid-area: moon-image;
+        // $578 million
+        color: white;
+        font-size: 19.64px;
+        font-weight: 700;
+        line-height: 23.57px;
+        word-wrap: break-word;
+      }
+      .title.moon {
+        grid-area: moon-title;
+      }
+      .subtitle.moon {
+        grid-area: moon-subtitle;
+      }
+    }
+    .iceburg {
+      margin: auto;
+    }
+    @media screen and (max-width: 750px) {
+      .content {
+        grid: "sun-image" "sun-title" "sun-subtitle" "." 40px "earth-image" "earth-title" "earth-subtitle" "." 40px "moon-image" "moon-title" "moon-subtitle";
+      }
+    }
+
+    .market-opportunity {
+      margin-top: 64px;
+      .iceburg-small {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 1139px) {
+    .into-the-market {
+      .content {
+        margin: 0 50px;
+      }
+      .iceburg {
+        display: none;
+      }
+      .iceburg-small {
+        margin: auto;
+        display: block !important;
+      }
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".into-the-market h2", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".into-the-market",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".into-the-market .header", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".into-the-market",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".into-the-market .content .image", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".into-the-market",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".into-the-market .content .title", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".into-the-market",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".into-the-market .content .subtitle", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".into-the-market",
+      start: "top center",
+    },
+  });
+</script>

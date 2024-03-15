@@ -1,0 +1,101 @@
+<section class="page-title container mx-auto">
+  <div class="mx-auto flex h-full">
+    <div class="content w-full md:w-10/12 hfull mx-auto flex flex-col justify-center">
+      <h1 data-cursor-text="         " class="probesats">
+        PROBE<span class="accent">SATS</span>
+      </h1>
+      <div class="sub-title">the Ultimate Bitcoin Experience</div>
+      <p class="">
+        To be the go-to app for Bitcoin Needs by making it simple, accessible,
+        and seamless.
+      </p>
+    </div>
+  </div>
+</section>
+<style lang="scss">
+  .page-title {
+    .content {
+      background-image: url("/title-background.svg");
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-position-y: 80%;
+    }
+    .probesats {
+      font-size: 128px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-bottom: 0px;
+    }
+    .sub-title {
+      font-size: 32px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 38px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-bottom: 77px;
+    }
+    p {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 29px;
+      letter-spacing: 0em;
+      text-align: left;
+      mix-blend-mode: difference;
+    }
+  }
+  @media screen and (max-width: 1600px) {
+    .page-title {
+      .content{
+        background-position-y: center;
+      }
+      .probesats {
+        font-size: 80px;
+        margin-top: 40px;
+      }
+      .sub-title {
+        font-size: 24px;
+        margin-bottom: 90px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .page-title {
+      .content{
+        background-size: 80%;
+        background-position-y: center;
+      }
+      .probesats {
+        font-size: 50px;
+      }
+      .sub-title {
+        font-size: 18px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .page-title {
+      .content{
+        background-size: contain;
+      }
+      .probesats {
+        font-size: 33px;
+      }
+      .sub-title {
+        font-size: 14px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+</style>

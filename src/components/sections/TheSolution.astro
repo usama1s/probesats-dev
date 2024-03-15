@@ -1,0 +1,226 @@
+<section class="the-solution not-full-height">
+  <div class="container mx-auto ps-grid">
+    <h2>The Solution</h2>
+    <div class="image">
+      <img
+        class="radar"
+        src="/radar.svg"
+        alt="Let's make it simple"
+      />
+      <img class="scan" src="/scan.svg" />
+      <div class="radar-dot radar-dot-2" style="top: 25%; left: 30%;"></div>
+      <div class="radar-dot radar-dot-3" style="top: 15%; left: 50%;"></div>
+      <div class="radar-dot radar-dot-4" style="top: 45%; left: 75%;"></div>
+      <div class="radar-dot radar-dot-5" style="top: 80%; left: 45%;"></div>
+      <div class="radar-dot radar-dot-6" style="top: 75%; left: 45%;"></div>
+    </div>
+    <div class="text">
+      <p>A better user experience to</p>
+      <ul class="accent">
+        <li>Find Info</li>
+        <li>Chart</li>
+        <li>Analyze & Data visualization</li>
+        <li>Market Aggregation</li>
+        <li>Onboarding New Protocols</li>
+      </ul>
+      <p>
+        For 9 months, <span class="accent">Probesats is</span> analyzing the data
+        and<br /> building <span class="accent"> the platform needed for</span> the
+        Hottest and<br /> fasted Growing <span class="accent"
+          >Bitcoin Ecosystem.</span
+        >
+      </p>
+    </div>
+    <div class="text-2">
+      We crafted Probesats to meet current needs, developing smart algorithms to
+      address intricate infrastructure challenges. It's a simple yet powerful
+      product, meeting market demands with precision.
+    </div>
+  </div>
+</section>
+
+<style>
+  .image {
+    grid-column: 9 / span 3;
+    position: relative;
+    aspect-ratio: 1/1;
+    height: auto;
+    grid-row: 2;
+    .radar-text {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    .scan {
+      position: absolute;
+      transform: 0;
+      transform-origin: 50% 50%;
+      top: 0;
+      left: 0;
+    }
+    .radar-dot {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: #eccba1;
+      backdrop-filter: blur(4px);
+      box-shadow: 0px 0px 16px 4px #f7931a;
+      border-radius: 50%;
+      scale: 0;
+    }
+    div {
+      position: absolute;
+      top: 50%;
+      left: 45%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  .text {
+    grid-column: 2 / span 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-row: 2;
+    gap: 26px;
+
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    p:nth-child(1) {
+    }
+
+    p:nth-child(2) {
+    }
+  }
+
+  .text-2 {
+    text-align: center;
+    grid-column: 3/-3;
+    font-family: National 2 Condensed;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 6rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  li {
+    list-style: inside;
+  }
+
+  @media screen and (max-width: 900px) {
+    .image {
+      grid-column: 2/-2;
+      grid-row: 3;
+    }
+    .text {
+      grid-column: 2/-2;
+      grid-row: 2;
+    }
+    .container {
+      place-items: center;
+      gap: 2rem;
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".the-solution h2", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".the-solution",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".the-solution .text", {
+    y: 100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".the-solution",
+      start: "top center",
+    },
+  });
+
+  gsap.from(".the-solution .text-2", {
+    y: 100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".the-solution",
+      start: "top center",
+    },
+  });
+
+  const dotTimeline = (dot: number, start: number, end: number) => {
+    const tl = gsap.timeline({
+      defaults: {
+        ease: "power1.inOut",
+      },
+    });
+    tl.fromTo(
+      `.radar-dot-${dot}`,
+      { scale: 0, opacity: 0 },
+      {
+        scale: 1,
+        duration: 0.5,
+        opacity: 1,
+      },
+      `${start}`
+    );
+    tl.to(
+      `.radar-dot-${dot}`,
+      {
+        scale: 0,
+        duration: 0.5,
+        opacity: 0,
+      },
+      `${end}`
+    );
+    return tl;
+  };
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".the-solution",
+        start: "top center",
+      },
+      repeat: -1,
+    })
+    .fromTo(
+      ".scan",
+      { rotate: 0 },
+      {
+        rotate: 360,
+        duration: 20,
+        ease: "none",
+      }
+    )
+    .add(dotTimeline(2, 0.65, 4.3), 0)
+    .add(dotTimeline(3, 2.75, 6.4), 0)
+    .add(dotTimeline(4, 7, 11), 0)
+    .add(dotTimeline(5, 13, 17), 0)
+    .add(dotTimeline(6, 13, 17), 0);
+</script>

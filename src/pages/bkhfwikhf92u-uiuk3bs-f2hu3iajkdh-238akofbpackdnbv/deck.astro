@@ -1,0 +1,311 @@
+---
+import FluidCursorCanvas from "../../components/shared/FluidCursorCanvas.astro";
+import Cursor from "../../components/shared/Cursor.astro";
+import Particles from "../../components/shared/Particles.astro";
+import LetsDoItTogether from "../../components/sections/LetsDoItTogether.astro";
+import PageTitle from "../../components/sections/PageTitle.astro";
+import BiggestSeason from "../../components/sections/BiggestSeason.astro";
+import TheSolution from "../../components/sections/TheSolution.astro";
+import KeyFeatures from "../../components/sections/KeyFeatures.astro";
+import Traction from "../../components/sections/Traction.astro";
+import IntoTheMarket from "../../components/sections/TheMarket.astro";
+import CompetitiveEdge from "../../components/sections/CompetitiveEdge.astro";
+import TheAsk from "../../components/sections/TheAsk.astro";
+import Projections from "../../components/sections/Projections.astro";
+import TheRouteAhead from "../../components/sections/TheRouteAhead.astro";
+import Team from "../../components/sections/Team.astro";
+import TheMethod from "../../components/sections/TheMethod.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>Probesats</title>
+  </head>
+  <body data-fluid-cursor class="loading">
+    <FluidCursorCanvas />
+    <Cursor />
+    <Particles />
+
+    <nav>
+      <div class="container mx-auto ps-grid">
+        <img class="logo" src="/logo.svg" alt="Probesats" />
+        <img
+          class="confidential-button"
+          src="/confidential-pitch.svg"
+          alt="Confidential"
+        />
+        <div class="confidential-button-alt">
+          <span class="accent">Confidential</span> Private investors pitch
+        </div>
+        <img class="contact-us" src="/menu.svg" />
+      </div>
+    </nav>
+
+    <PageTitle />
+
+    <BiggestSeason />
+
+    <TheSolution />
+
+    <TheMethod />
+
+    <KeyFeatures />
+
+    <Traction />
+
+    <IntoTheMarket />
+
+    <CompetitiveEdge />
+
+    <Projections />
+
+    <TheAsk />
+
+    <TheRouteAhead />
+
+    <Team />
+
+    <LetsDoItTogether />
+  </body>
+</html>
+
+<style lang="scss" is:global>
+  :root {
+    --accent: 247, 147, 26;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+    --background: #070b0f;
+  }
+
+  html {
+    font-family: Montserrat, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  body {
+    color: white;
+    background:
+      url("/background.svg") no-repeat,
+      var(--background);
+    background-image: url("/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75px;
+    min-width:440px;
+  }
+
+  .accent {
+    color: rgb(var(--accent));
+  }
+
+  .container {
+    max-width: 1770px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 120px !important;
+    padding-right: 120px !important;
+  }
+
+  @media screen and (max-width: 1600px) {
+    .container {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .container {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .container {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    }
+  }
+  @media screen and (max-width: 567px) {
+    .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    }
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(25px);
+    z-index: 4;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .container {
+      align-items: center;
+    }
+    .logo {
+      grid-column: 1;
+      margin-right: 2rem;
+    }
+    .nav-content {
+      display: flex;
+      flex-direction: row;
+      gap: 36px;
+    }
+    .confidential-button {
+      grid-column: 2 / -2;
+    }
+    .confidential-button-alt {
+      display: none;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+    }
+    .contact-us {
+      margin-left: auto;
+      float: right;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      grid-column: -1;
+    }
+  }
+  .checkbox-small {
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
+    nav {
+      .confidential-button-alt {
+        display: flex;
+      }
+      .confidential-button {
+        display: none;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+      }
+      .logo{
+margin-right: 1rem;
+      }
+    }
+  }
+
+  body > section:not(.not-full-height) {
+    height: calc(100vh - 0px);
+  }
+  body > nav + section:not(.not-full-height) {
+    height: calc(100vh - 100px);
+  }
+
+  body > section {
+    > h2,
+    > div h2 {
+      font-size: 90px;
+      font-weight: 700;
+      line-height: 108px;
+      letter-spacing: -4px;
+      text-align: left;
+      margin: 10rem 0 5rem 0;
+    }
+    > div.ps-grid h2 {
+      grid-column: 1 / span 12;
+    }
+    > h3,
+    > div h3 {
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 77px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin: 100px 0 50px 0;
+      grid-column: 2 / -1;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    section {
+      > h2 {
+        font-size: 60px;
+        line-height: 72px;
+        margin: 61px 1rem;
+      }
+      > .container.ps-grid h2 {
+        grid-column: 1 / span 12;
+      }
+    }
+  }
+  @media screen and (max-width: 750px) {
+    body > section {
+      > h2,
+      > .container h2 {
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -1px;
+        margin: 61px 1rem;
+      }
+      > .container.ps-grid h2 {
+        grid-column: 1 / span 12;
+      }
+      > h3,
+      > .container h3 {
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .ps-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 12px;
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { TextPlugin } from "gsap/TextPlugin";
+  import Lenis from "@studio-freight/lenis";
+
+  gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+  window.addEventListener("splash-ended", () => {
+    const lenis = new Lenis();
+
+    lenis.on("scroll", ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+  });
+
+  gsap.ticker.lagSmoothing(0);
+</script>
