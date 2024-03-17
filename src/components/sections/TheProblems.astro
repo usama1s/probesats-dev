@@ -1,0 +1,322 @@
+<section class="container mx-auto not-full-height">
+  <div>
+    <h2 class="the-problems mb-10">The <span> Problems</span></h2>
+  </div>
+
+  <div class="flex">
+    <div class="w-full lg:w-10/12 mx-auto">
+      <div class="scroll-card pinned critical-ecosystem-issues">
+        <div>
+          <div class="title">Critical Ecosystem Issues</div>
+          <div class="left">
+            <img src="/critical-ecosystem-issues.svg" alt="Where to swap?" />
+          </div>
+          <div class="right">
+            <ul>
+              <li>
+                <img src="/crit-eco-checkbox.svg" class="checkbox-large" />
+                <img class="checkbox-small" src="/checkbox-small.svg" />Missing
+                Information
+              </li>
+              <li>
+                <img src="/crit-eco-checkbox.svg" class="checkbox-large" /><img
+                  class="checkbox-small"
+                  src="/checkbox-small.svg"
+                />Fragmented Data Sources
+              </li>
+              <li>
+                <img src="/crit-eco-checkbox.svg" class="checkbox-large" /><img
+                  class="checkbox-small"
+                  src="/checkbox-small.svg"
+                />No Charting Tools
+              </li>
+              <li>
+                <img src="/crit-eco-checkbox.svg" class="checkbox-large" /><img
+                  class="checkbox-small"
+                  src="/checkbox-small.svg"
+                />Absence of Baisc Technical Tools
+              </li>
+              <li>
+                <img src="/crit-eco-checkbox.svg" class="checkbox-large" /><img
+                  class="checkbox-small"
+                  src="/checkbox-small.svg"
+                />Marketplace Inefficiencies
+              </li>
+            </ul>
+          </div>
+          <img class="widgets" src="/widgets-2.svg" alt="2" />
+        </div>
+      </div>
+      <div class="scroll-card pinned where-to-swap">
+        <div>
+          <div class="title">Where to swap ?</div>
+          <div class="left">
+            <img src="/where-to-swap.svg" alt="Where to swap?" />
+          </div>
+          <div class="right">
+            <div>
+              <p class="pb-4">
+                Even basics, like finding the floor price is a challenge
+              </p>
+              <ul>
+                <li class="!block">
+                  $BENY is <span class="accent"> $60.77</span> on Unisat but <span
+                    class="accent"
+                  >
+                    $90.07</span
+                  > on OKX here..
+                </li>
+              </ul>
+            </div>
+          </div>
+          <img class="widgets" src="/widgets-1.svg" alt="1" />
+        </div>
+      </div>
+      <div class="scroll-card pinned bad-execution">
+        <div>
+          <div class="title">Bad execution</div>
+          <div class="left">
+            <img src="/bad-execution.svg" alt="Bitcoin" />
+          </div>
+          <div class="right">
+            <ul>
+              <li>
+                <span class="accent">0%</span> website have all tokens listed
+              </li>
+              <li>
+                <span class="accent">missing info</span> about BITCOIN PROTOCOLS
+              </li>
+              <li>Data is <span class="accent">Incomplete</span></li>
+              <li>
+                <span class="accent">Not Positioned</span> for Bitcoin Defi
+              </li>
+            </ul>
+          </div>
+          <img class="widgets" src="/widgets-3.svg" alt="3" />
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .checkbox-large {
+    display: none;
+  }
+  .checkbox-small {
+    width: 25px;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .scroll-card {
+    padding: 0 !important;
+    padding-bottom: 50px !important;
+    min-height: calc(90vh - 370px);
+    display: flex;
+    align-items: center;
+    > div {
+      background: #0202024d;
+      border-radius: 40px;
+      position: relative;
+      backdrop-filter: blur(25px);
+      width: 100%;
+      padding: 40px 100px 40px 100px !important;
+      height: fit-content;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border: 0.5px solid rgb(152, 152, 152);
+    }
+    .title {
+      width: 100%;
+      font-family: "National", sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: 0em;
+      text-align: left;
+      height: min-content;
+      margin-bottom: 40px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: 0em;
+        text-align: left;
+        align-items: center;
+        letter-spacing: -1px;
+      }
+    }
+    .right,
+    .left {
+      width: calc(50% - 50px);
+      display: flex;
+      align-items: center;
+    }
+    .right {
+      p {
+        font-size: 26px;
+        letter-spacing: -1px;
+        font-weight: Bold;
+        line-height: 1;
+      }
+    }
+    .widgets {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+  }
+  .bad-execution ul li{
+    position: relative;
+    padding-left: 20px;
+  }
+  .bad-execution ul li::before{
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    left: 0;
+    background-color: rgb(var(--accent));
+    border-radius: 50%;
+  }
+
+  @media screen and (max-width: 1700px) {
+    .scroll-card {
+      > div {
+        padding: 30px 50px 40px 50px !important;
+        .title {
+          font-size: 34px;
+        }
+        ul {
+          li {
+            font-size: 16px;
+            letter-spacing: 0;
+          }
+        }
+        .right,
+    .left {
+      width: calc(50% - 20px);
+      display: flex;
+    }
+        .right {
+          p {
+            letter-spacing: 0;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .scroll-card {
+      > div {
+        .left,
+        .right {
+          width: calc(50% - 10px);
+        }
+
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    h2 {
+      text-align: center;
+    }
+    .scroll-card {
+      max-width: 400px;
+      margin: auto;
+      > div {
+        flex-direction: column-reverse;
+        padding: 30px 30px 40px 30px !important;
+        margin-left: -10px;
+        margin-right: -10px;
+        width: calc(100% + 20px);
+        border-radius: 16px;
+        .left {
+          width: 100%;
+        }
+        .right {
+          margin-bottom: 40px;
+          width: 100%;
+          p{
+
+          }
+        }
+        .title {
+          order: 1;
+          font-weight: 400;
+          margin-bottom: 30px;
+          font-size: 24px;
+        }
+        ul {
+          gap: 5px;
+          li {
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .where-to-swap ul li,
+    .where-to-swap>div .right p{
+      text-align: center;
+    }
+  }
+</style>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  const tl = gsap.timeline({
+    repeat: -1,
+    repeatDelay: 0.5,
+    defaults: {
+      duration: 2,
+    },
+  });
+
+  const scrollCards: any = gsap.utils.toArray(".scroll-card.pinned");
+  const mm1 = gsap.matchMedia();
+  // mm1.add("(min-width: 750px)", () => {
+  //   const scrollCardsTitle: any = gsap.utils.toArray(".the-problems");
+  //   scrollCardsTitle.forEach((card: any) => {
+  //     ScrollTrigger.create({
+  //       trigger: card,
+  //       start: "center 20%",
+  //       end: "center center",
+  //       endTrigger: scrollCards[scrollCards.length - 1],
+  //       pin: true,
+  //       pinSpacing: false,
+  //     });
+  //   });
+  // });
+
+  const mm = gsap.matchMedia();
+
+  mm.add("(min-width: 750px)", () => {
+    scrollCards.forEach((card: any) => {
+      ScrollTrigger.create({
+        trigger: card,
+        start: "center center",
+        end: "center center",
+        endTrigger: scrollCards[scrollCards.length - 1],
+        pin: true,
+        pinSpacing: false,
+      });
+    });
+  });
+</script>
