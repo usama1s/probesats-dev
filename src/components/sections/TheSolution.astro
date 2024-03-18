@@ -1,36 +1,65 @@
-<section class="the-solution not-full-height">
-  <div class="container mx-auto ps-grid">
-    <h2>The Solution</h2>
-    <div class="image">
-      <img
-        class="radar"
-        src="/radar.svg"
-        alt="Let's make it simple"
-      />
-      <img class="scan" src="/scan.svg" />
-      <div class="radar-dot radar-dot-2" style="top: 25%; left: 30%;"></div>
-      <div class="radar-dot radar-dot-3" style="top: 15%; left: 50%;"></div>
-      <div class="radar-dot radar-dot-4" style="top: 45%; left: 75%;"></div>
-      <div class="radar-dot radar-dot-5" style="top: 80%; left: 45%;"></div>
-      <div class="radar-dot radar-dot-6" style="top: 75%; left: 45%;"></div>
+<section class="the-solution">
+  <div class="container mx-auto">
+    <h2 class="xl:hidden block mb-10 text-center">The <span class="accent"> Solution</span></h2>
+    <div class="card">
+      <div class="text flex !justify-between">
+        <h2 class="xl:block hidden">The <span class="accent"> Solution</span></h2>
+        <div>
+          <p class="mb-10">A better user experience to</p>
+          <ul class="accent">
+            <li>
+              <img src="/crit-eco-checkbox.svg" class="checkbox-large" /> Find Info
+            </li>
+            <li>
+              <img src="/crit-eco-checkbox.svg" class="checkbox-large" />Chart
+            </li>
+            <li>
+              <img src="/crit-eco-checkbox.svg" class="checkbox-large" />Analyze
+              & Data visualization
+            </li>
+            <li>
+              <img src="/crit-eco-checkbox.svg" class="checkbox-large" />Market
+              Aggregation
+            </li>
+            <li>
+              <img
+                src="/crit-eco-checkbox.svg"
+                class="checkbox-large"
+              />Onboarding New Protocols
+            </li>
+          </ul>
+          <p class="text-2 hidden lg:block xl:hidden">
+            For 9 months, <span class="accent">Probesats is</span> analyzing the data
+            and<br /> building <span class="accent">
+              the platform needed for</span
+            > the Hottest and<br /> fasted Growing <span class="accent"
+              >Bitcoin Ecosystem.</span
+            >
+          </p>
+        </div>
+      </div>
+      <div class="image-side flex !justify-between flex-col items-start lg:items-center">
+        <div class="image">
+          <img class="radar" src="/radar.svg" alt="Let's make it simple" />
+          <img class="scan" src="/scan.svg" />
+          <div class="radar-dot radar-dot-2" style="top: 25%; left: 30%;"></div>
+          <div class="radar-dot radar-dot-3" style="top: 15%; left: 50%;"></div>
+          <div class="radar-dot radar-dot-4" style="top: 45%; left: 75%;"></div>
+          <div class="radar-dot radar-dot-5" style="top: 80%; left: 45%;"></div>
+          <div class="radar-dot radar-dot-6" style="top: 75%; left: 45%;"></div>
+        </div>
+
+        <p class="text-2 block lg:hidden xl:block">
+          For 9 months, <span class="accent">Probesats is</span> analyzing the data
+          and<br /> building <span class="accent">
+            the platform needed for</span
+          > the Hottest and<br /> fasted Growing <span class="accent"
+            >Bitcoin Ecosystem.</span
+          >
+        </p>
+      </div>
     </div>
-    <div class="text">
-      <p>A better user experience to</p>
-      <ul class="accent">
-        <li>Find Info</li>
-        <li>Chart</li>
-        <li>Analyze & Data visualization</li>
-        <li>Market Aggregation</li>
-        <li>Onboarding New Protocols</li>
-      </ul>
-      <p>
-        For 9 months, <span class="accent">Probesats is</span> analyzing the data
-        and<br /> building <span class="accent"> the platform needed for</span> the
-        Hottest and<br /> fasted Growing <span class="accent"
-          >Bitcoin Ecosystem.</span
-        >
-      </p>
-    </div>
+
     <div class="text-2">
       We crafted Probesats to meet current needs, developing smart algorithms to
       address intricate infrastructure challenges. It's a simple yet powerful
@@ -40,45 +69,74 @@
 </section>
 
 <style>
-  .image {
-    grid-column: 9 / span 3;
-    position: relative;
-    aspect-ratio: 1/1;
-    height: auto;
-    grid-row: 2;
-    .radar-text {
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: left;
+  p {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0em;
+  }
+  .text-2 {
+    padding-top: 50px;
+  }
+  .card {
+    
+    display: flex;
+    justify-content: space-between;
+    .image-side {
+      position: relative;
+      height: auto;
+      width: calc(50% - 40px);
+      .image {
+        width: 400px;
+        position: relative;
+        margin: 25px;
+
+        div {
+          position: absolute;
+          top: 50%;
+          left: 45%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+        .scan {
+          position: absolute;
+          /* width: calc(100% - 40px); */
+          transform: 0;
+          transform-origin: 50% 50%;
+          top: 0;
+          left: 0;
+        }
+        .radar-dot {
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          background: #eccba1;
+          backdrop-filter: blur(4px);
+          box-shadow: 0px 0px 16px 4px #f7931a;
+          border-radius: 50%;
+          scale: 0;
+        }
+      }
+      .image::before {
+        background-color: rgba(0, 0, 0, 1);
+        border-radius: 12px;
+        content: "";
+        width: calc(100% + 50px);
+        height: calc(100% + 50px);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
     }
-    .scan {
-      position: absolute;
-      transform: 0;
-      transform-origin: 50% 50%;
-      top: 0;
-      left: 0;
+    .text {
+      width: calc(50% - 40px);
     }
-    .radar-dot {
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      background: #eccba1;
-      backdrop-filter: blur(4px);
-      box-shadow: 0px 0px 16px 4px #f7931a;
-      border-radius: 50%;
-      scale: 0;
-    }
-    div {
-      position: absolute;
-      top: 50%;
-      left: 45%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+  }
+  .image-side {
   }
   .text {
     grid-column: 2 / span 6;
@@ -87,53 +145,86 @@
     justify-content: center;
     grid-row: 2;
     gap: 26px;
-
-    font-family: "National", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0em;
     text-align: left;
-
-    p:nth-child(1) {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      li {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.2;
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        color: white;
+      }
     }
+  }
 
-    p:nth-child(2) {
+  @media screen and (max-width: 1700px) {
+    p {
+      font-size: 24px;
+    }
+    .card {
+      .image-side {
+        .image {
+          width: 300px;
+        }
+      }
+      .text {
+        ul {
+          li {
+            font-size: 20px;
+          }
+        }
+      }
     }
   }
-
-  .text-2 {
-    text-align: center;
-    grid-column: 3/-3;
-    font-family: National 2 Condensed;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 31px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-top: 6rem;
+  @media screen and (max-width: 1200px){
+.text-2{
+  font-size: 20px;
+}
   }
-
-  ul {
-    padding-left: 1rem;
+  @media screen and (max-width: 1024px) {
+    p {
+      font-size: 20px;
+    }
+    .text-2 {
+      font-size: 22px;
+    }
+    .card {
+      max-width: 500px;
+      margin: auto;
+      flex-direction: column;
+      .image-side {
+        width: 100%;
+        .image {
+        }
+      }
+      .text {
+        width: 100%;
+        ul {
+          li {
+            font-size: 16px;
+          }
+        }
+      }
+    }
   }
-
-  li {
-    list-style: inside;
-  }
-
-  @media screen and (max-width: 900px) {
-    .image {
-      grid-column: 2/-2;
-      grid-row: 3;
+  @media screen and (max-width: 767px) {
+    p {
+      font-size: 16px;
+    }
+    .text-2 {
+      font-size: 18px;
     }
     .text {
-      grid-column: 2/-2;
-      grid-row: 2;
-    }
-    .container {
-      place-items: center;
-      gap: 2rem;
+      ul {
+        li {
+          font-size: 12px;
+        }
+      }
     }
   }
 </style>
